@@ -1,0 +1,12 @@
+{
+  "name": "Oak & Paw Pet Services",
+  "short_name": "Oak & Paw",
+  "description": "Insured, certified pet care in Chicago. Dog walking, pet sitting, and boarding.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF5EA",
+  "theme_color": "#1F2A1D",
+  "icons": [
+    { "src": "/images/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
