@@ -66,16 +66,6 @@ button { font: inherit; cursor: pointer; }
 
 ::selection { background: var(--gold); color: var(--forest-deep); }
 
-/* Skip link */
-.skip-link {
-  position: absolute; top: -40px; left: 1rem;
-  background: var(--forest); color: var(--on-dark);
-  padding: .6rem 1rem; border-radius: var(--radius-sm);
-  text-decoration: none; z-index: 1000;
-  transition: top .15s var(--ease);
-}
-.skip-link:focus { top: 1rem; }
-
 /* Focus ring */
 :focus-visible {
   outline: 2px solid var(--gold);
