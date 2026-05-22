@@ -575,6 +575,49 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 .testimonial .who strong { color: var(--forest); font-family: var(--ff-body); }
 .testimonial .who .stars { color: var(--gold); letter-spacing: 2px; }
 
+/* Social CTA (replaces testimonials when real ones aren't ready) */
+.social-cta {
+  display: grid; gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 720px; margin: 0 auto;
+}
+.social-card {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), border-color .25s var(--ease-out);
+}
+.social-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
+  color: inherit;
+}
+.social-card .social-icon {
+  width: 52px; height: 52px; flex: none;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, rgba(201,169,97,.2), rgba(201,169,97,.06));
+  border-radius: 50%;
+  color: var(--gold-deep);
+}
+.social-card .social-icon svg { width: 26px; height: 26px; }
+.social-card strong {
+  display: block;
+  font-family: var(--ff-serif);
+  font-size: 1.25rem;
+  color: var(--forest);
+  margin-bottom: .15rem;
+}
+.social-card span {
+  display: block;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
 /* CTA banner ------------------------------------------------------------- */
 .cta-banner {
   background: linear-gradient(135deg, var(--forest-deep), var(--forest) 60%, var(--forest-soft));
@@ -826,6 +869,25 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
   font-size: 1.05rem;
 }
 .footer-tagline { margin-top: 1rem; max-width: 320px; font-size: .95rem; }
+
+.footer-social {
+  display: flex; gap: .65rem; margin-top: 1.25rem;
+}
+.footer-social a {
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  border: 1px solid rgba(239, 233, 217, .25);
+  border-radius: 50%;
+  color: var(--on-dark-soft);
+  transition: color .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease), transform .2s var(--ease);
+}
+.footer-social a:hover {
+  color: var(--forest-deep);
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.footer-social svg { width: 18px; height: 18px; }
 
 .footer-col h5 {
   font-family: var(--ff-display);

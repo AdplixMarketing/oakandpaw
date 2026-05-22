@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oakandpawpets.com/sitemap.xml
+Sitemap: https://oaknpaw.com/sitemap.xml
