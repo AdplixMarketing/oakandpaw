@@ -119,6 +119,20 @@ h4 { font-size: 1.1rem; }
   margin-right: .75rem;
 }
 
+/* Centered eyebrows get a matching trailing rule so they read symmetrically */
+.section-head .eyebrow::after,
+.page-hero .eyebrow::after,
+.cta-banner .eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 28px; height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-left: .75rem;
+}
+.page-hero .eyebrow::after,
+.cta-banner .eyebrow::after { background: var(--gold-warm); }
+
 p { margin: 0 0 1rem; }
 p.lead { font-size: 1.2rem; color: var(--ink-soft); max-width: 60ch; line-height: 1.6; text-wrap: pretty; }
 
@@ -420,9 +434,9 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 .hero-media .ring.r2 { inset: 6%; border-color: rgba(201, 169, 97, .25); border-style: dashed; }
 .hero-media .ring.r3 { inset: 12%; border-color: rgba(201, 169, 97, .18); }
 .hero-media .logo-wrap {
-  position: absolute; inset: 17%;
+  position: absolute; inset: 15%;
   display: grid; place-items: center;
-  padding: 11%;
+  padding: 4%;
   background: radial-gradient(circle at 50% 36%, var(--ivory), var(--cream) 80%);
   border-radius: 50%;
   box-shadow:
@@ -973,6 +987,8 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
   display: grid; gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
   max-width: 820px; margin: 2rem auto 0;
+  padding: 0;            /* reset default <ul> inline padding so chips stay centered */
+  list-style: none;
 }
 .area-grid li {
   list-style: none;
@@ -986,6 +1002,11 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 }
 @media (hover: hover) {
   .area-grid li:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: var(--shadow-sm); }
+}
+/* On phones, center the town chips (the 3rd no longer strands on the left) */
+@media (max-width: 600px) {
+  .area-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+  .area-grid li { flex: 0 1 46%; max-width: 260px; }
 }
 
 /* Footer ----------------------------------------------------------------- */
