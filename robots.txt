@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oaknpaw.com/sitemap.xml
+Sitemap: https://oakandpaw.vercel.app/sitemap.xml
