@@ -1178,6 +1178,31 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 .to-top:hover { background: var(--gold); color: var(--forest-deep); }
 .to-top svg { width: 20px; height: 20px; }
 
+/* Footer legal links ----------------------------------------------------- */
+.footer-legal {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: .35rem 1.25rem;
+}
+
+/* Long-form / legal pages ------------------------------------------------- */
+.prose { max-width: 760px; margin: 0 auto; }
+.prose .updated {
+  font-family: var(--ff-display);
+  font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 2rem;
+  display: block;
+}
+.prose h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); margin: 2.75rem 0 .75rem; }
+.prose h2:first-of-type { margin-top: 0; }
+.prose h3 { font-size: 1.18rem; margin: 1.75rem 0 .5rem; color: var(--forest); }
+.prose p { color: var(--ink-soft); }
+.prose ul { color: var(--ink-soft); padding-left: 1.25rem; margin: 0 0 1.1rem; display: grid; gap: .45rem; }
+.prose li { padding-left: .2rem; }
+.prose a { color: var(--gold-deep); font-weight: 500; }
+.prose strong { color: var(--forest); }
+.prose .lead { color: var(--ink-soft); }
+
 /* Utilities -------------------------------------------------------------- */
 .text-center { text-align: center; }
 .muted { color: var(--muted); }
