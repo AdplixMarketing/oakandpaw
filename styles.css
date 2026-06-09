@@ -622,6 +622,10 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
   box-shadow: var(--shadow-md);
 }
 @media (max-width: 640px) { .service-banner { aspect-ratio: 16 / 10; } }
+/* Desktop-only: lift the crop so the dog's face clears the wide 21:9 banner */
+@media (min-width: 641px) {
+  .service-banner--face { background-position: center 28%; }
+}
 
 /* Hero medallion photo variant: swaps the logo for a dog portrait that
    fills the existing disc + rings frame (add .has-photo to .hero-media). */
