@@ -372,6 +372,29 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
   z-index: -1;
 }
 
+/* Hero background video: ambient, heavily darkened so copy stays legible */
+.hero-video {
+  position: absolute; inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-video video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-video::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(19,27,17,.86), rgba(19,27,17,.80) 50%, rgba(19,27,17,.92)),
+    radial-gradient(120% 80% at 70% 0%, rgba(19,27,17,.35), rgba(19,27,17,.75));
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video video { display: none; }   /* poster/gradient remains */
+}
+
 .hero-inner {
   padding-block: clamp(3.5rem, 9vw, 6.5rem);
   display: grid;
@@ -552,6 +575,62 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 @media (hover: hover) {
   .service-card:hover .more { color: var(--forest); }
   .service-card:hover .more span { transform: translateX(4px); }
+}
+
+/* Photo slots -----------------------------------------------------------
+   Each slot layers: subtle overlay + the photo (var --photo) + a forest
+   gradient fallback. If the image file is missing, the gradient shows, so
+   nothing ever looks broken. Drop the real .jpg in and it appears. */
+.service-card.has-media { padding: 0; }
+.service-card .service-card-media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-image:
+    linear-gradient(160deg, rgba(31,42,29,0) 42%, rgba(19,27,17,.45)),
+    var(--photo, none),
+    linear-gradient(140deg, var(--forest-soft), var(--forest-deep));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-card .service-card-body {
+  padding: 1.75rem;
+  display: flex; flex-direction: column; gap: 1rem;
+  flex: 1 1 auto;
+}
+/* icon lifts to overlap the photo band as a floating badge */
+.service-card.has-media .service-icon {
+  position: relative;
+  margin-top: -58px;
+  background: var(--ivory);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px rgba(201,169,97,.25);
+}
+
+/* Wide service banners (services.html) */
+.service-banner {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border-radius: var(--radius-lg);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  background-image:
+    linear-gradient(120deg, rgba(19,27,17,.28), rgba(19,27,17,0) 55%),
+    var(--photo, none),
+    linear-gradient(140deg, var(--forest-soft), var(--forest-deep));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow-md);
+}
+@media (max-width: 640px) { .service-banner { aspect-ratio: 16 / 10; } }
+
+/* Hero medallion photo variant: swaps the logo for a dog portrait that
+   fills the existing disc + rings frame (add .has-photo to .hero-media). */
+.hero-media.has-photo .logo-wrap { padding: 0; overflow: hidden; }
+.hero-media.has-photo .logo-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: none;
 }
 
 /* Why us ----------------------------------------------------------------- */

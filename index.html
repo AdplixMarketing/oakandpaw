@@ -14,7 +14,7 @@
   <meta property="og:title" content="Oak &amp; Paw Pet Services — Dog Walking, Sitting &amp; Boarding" />
   <meta property="og:description" content="Insured, certified dog care in Oak Park, Oak Lawn, Oak Brook, and the Chicago suburbs. One trusted caretaker with 10+ years of experience." />
   <meta property="og:url" content="https://oaknpaw.com/" />
-  <meta property="og:image" content="https://oaknpaw.com/images/logo.png" />
+  <meta property="og:image" content="https://oaknpaw.com/images/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/png" href="/images/logo.png" />
@@ -83,6 +83,11 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-video" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg">
+          <source src="images/hero-loop.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div class="container hero-inner">
         <div>
           <span class="eyebrow hero-eyebrow">Walking · Sitting · Boarding</span>
@@ -96,12 +101,12 @@
             <a class="btn btn-ghost-light btn-lg" href="services.html">Explore Services</a>
           </div>
         </div>
-        <div class="hero-media" aria-hidden="true">
+        <div class="hero-media has-photo" aria-hidden="true">
           <div class="ring"></div>
           <div class="ring r2"></div>
           <div class="ring r3"></div>
           <div class="logo-wrap">
-            <img src="images/logo.png" alt="" width="420" height="420" />
+            <img src="images/hero.jpg" alt="" width="420" height="420" />
           </div>
         </div>
       </div>
@@ -140,29 +145,38 @@
           <p>Tailored services for busy schedules, weekend trips, and everything in between.</p>
         </div>
         <div class="service-grid">
-          <a class="service-card reveal" href="services.html#walking">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h6l3-3 3 3h6"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><path d="M12 11c-2 0-4 2-4 4"/><path d="M12 11c2 0 4 2 4 4"/></svg>
+          <a class="service-card has-media reveal" href="services.html#walking" style="--photo:url('images/walking.jpg')">
+            <div class="service-card-media"></div>
+            <div class="service-card-body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h6l3-3 3 3h6"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><path d="M12 11c-2 0-4 2-4 4"/><path d="M12 11c2 0 4 2 4 4"/></svg>
+              </div>
+              <h3>Dog Walking</h3>
+              <p>Solo and small‑group walks with consistent pacing, hydration, and photo updates after every visit.</p>
+              <span class="more">See details <span aria-hidden="true">→</span></span>
             </div>
-            <h3>Dog Walking</h3>
-            <p>Solo and small‑group walks with consistent pacing, hydration, and photo updates after every visit.</p>
-            <span class="more">See details <span aria-hidden="true">→</span></span>
           </a>
-          <a class="service-card reveal" href="services.html#sitting">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l9-7 9 7v10"/><path d="M9 21v-6h6v6"/></svg>
+          <a class="service-card has-media reveal" href="services.html#sitting" style="--photo:url('images/sitting.jpg')">
+            <div class="service-card-media"></div>
+            <div class="service-card-body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l9-7 9 7v10"/><path d="M9 21v-6h6v6"/></svg>
+              </div>
+              <h3>Pet Sitting</h3>
+              <p>In‑home visits while you’re away. Feeding, fresh water, playtime, medications, and detailed check‑ins.</p>
+              <span class="more">See details <span aria-hidden="true">→</span></span>
             </div>
-            <h3>Pet Sitting</h3>
-            <p>In‑home visits while you’re away. Feeding, fresh water, playtime, medications, and detailed check‑ins.</p>
-            <span class="more">See details <span aria-hidden="true">→</span></span>
           </a>
-          <a class="service-card reveal" href="services.html#boarding">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"/><path d="M5 12V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4"/><path d="M4 12v6"/><path d="M20 12v6"/><path d="M8 15h8"/></svg>
+          <a class="service-card has-media reveal" href="services.html#boarding" style="--photo:url('images/boarding.jpg')">
+            <div class="service-card-media"></div>
+            <div class="service-card-body">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"/><path d="M5 12V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4"/><path d="M4 12v6"/><path d="M20 12v6"/><path d="M8 15h8"/></svg>
+              </div>
+              <h3>Boarding</h3>
+              <p>Overnight stays in a calm, pet‑proofed home. Limited spots so each guest gets individual attention.</p>
+              <span class="more">See details <span aria-hidden="true">→</span></span>
             </div>
-            <h3>Boarding</h3>
-            <p>Overnight stays in a calm, pet‑proofed home. Limited spots so each guest gets individual attention.</p>
-            <span class="more">See details <span aria-hidden="true">→</span></span>
           </a>
         </div>
       </div>
