@@ -318,8 +318,9 @@ section.tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 .nav-toggle[aria-expanded="true"] span::after  { transform: rotate(-45deg); }
 
 @media (max-width: 880px) {
-  .nav-toggle { display: inline-flex; }
+  .nav-toggle { display: inline-flex; margin-left: auto; }
   .nav-list, .nav .nav-cta { display: none; }
+  .nav > nav[aria-label="Primary"] { display: contents; }
 
   .nav-list.is-open {
     display: flex;
